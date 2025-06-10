@@ -81,3 +81,14 @@ describe("Sulfuras", function() {
   });
 
 });
+
+
+describe("Backstage passes", function() {
+
+  it("quality should never be more than 50", function() {
+    items = [ new Item("Backstage passes to a TAFKAL80ETC concert", 10, 50) ];
+    update_quality();
+    expect(items[0].quality).toEqual(50);
+  });
+
+});
