@@ -58,3 +58,14 @@ describe("Aged Brie", function() {
   });
 
 });
+
+
+describe("Sulfuras", function() {
+
+  it("quality should never decrease", function() {
+    items = [ new Item("Sulfuras, Hand of Ragnaros", 2, 30) ];
+    update_quality();
+    expect(items[0].quality).toEqual(30);
+  });
+
+});
