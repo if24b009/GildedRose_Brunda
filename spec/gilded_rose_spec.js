@@ -121,4 +121,16 @@ describe("Backstage passes", function() {
     expect(items[0].quality).toEqual(35);
   });
 
+  it("quality should drop to 0 when 0 days are left", function() {
+    items = [ new Item("Backstage passes to a TAFKAL80ETC concert", 0, 32) ];
+    update_quality();
+    expect(items[0].quality).toEqual(0);
+  });
+
+  it("quality should drop to 0 when sell_in by date has passed", function() {
+    items = [ new Item("Backstage passes to a TAFKAL80ETC concert", -1, 12) ];
+    update_quality();
+    expect(items[0].quality).toEqual(0);
+  });
+
 });
