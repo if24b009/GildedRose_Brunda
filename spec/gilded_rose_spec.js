@@ -20,4 +20,10 @@ describe("General logic", function() {
       expect(items[0].quality).toEqual(18);
     });
 
+	it("quality is never negative", function() {
+      items = [new Item("GeneralItem", 2, 0)];
+      update_quality();
+      expect(items[0].quality).toEqual(0);
+    });
+
 });
