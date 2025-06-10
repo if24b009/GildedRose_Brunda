@@ -1,4 +1,6 @@
 describe("General logic", function() {
+//+5 Dexterity Vest
+//Elixir of the Mongoose
 
   it("should foo", function() {
     items = [ new Item("foo", 0, 0) ];
@@ -31,5 +33,16 @@ describe("General logic", function() {
       update_quality();
       expect(items[0].quality).toEqual(0);
     });
+
+});
+
+
+describe("Aged Brie", function() {
+
+  it("quality should never be more than 50", function() {
+    items = [ new Item("Aged Brie", 10, 50) ];
+    update_quality();
+    expect(items[0].quality).toEqual(50);
+  });
 
 });
