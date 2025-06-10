@@ -63,15 +63,15 @@ describe("Aged Brie", function() {
 describe("Sulfuras", function() {
 
   it("quality should never decrease", function() {
-    items = [ new Item("Sulfuras, Hand of Ragnaros", 2, 30) ];
+    items = [ new Item("Sulfuras, Hand of Ragnaros", 2, 80) ];
     update_quality();
-    expect(items[0].quality).toEqual(30);
+    expect(items[0].quality).toEqual(80);
   });
 
   it("quality should never decrease even though sell_in by date has passed", function() {
-    items = [ new Item("Sulfuras, Hand of Ragnaros", -1, 30) ];
+    items = [ new Item("Sulfuras, Hand of Ragnaros", -1, 80) ];
     update_quality();
-    expect(items[0].quality).toEqual(30);
+    expect(items[0].quality).toEqual(80);
   });
 
 });
