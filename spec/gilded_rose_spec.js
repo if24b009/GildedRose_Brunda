@@ -144,18 +144,18 @@ describe("Backstage passes", function() {
 
 describe("Conjured", function() {
 
-  it("quality and sell_in should decrease by 1", function() {
+  it("quality and sell_in should decrease by 2 (twice as fast as normal items)", function() {
       items = [ new Item("Conjured Mana Cake", 4, 20)];
       update_quality();
       expect(items[0].sell_in).toEqual(3);
-      expect(items[0].quality).toEqual(19);
+      expect(items[0].quality).toEqual(18);
     });
 
-	it("quality decreases by 2 once sell by date has passed", function() {
+	it("quality decreases by 4 once sell by date has passed", function() {
       items = [new Item("Conjured Mana Cake", 0, 20)];
       update_quality();
       expect(items[0].sell_in).toEqual(-1);
-      expect(items[0].quality).toEqual(18);
+      expect(items[0].quality).toEqual(16);
     });
 
 	it("quality is never negative", function() {
