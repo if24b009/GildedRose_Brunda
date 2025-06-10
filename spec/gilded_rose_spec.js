@@ -45,10 +45,16 @@ describe("Aged Brie", function() {
     expect(items[0].quality).toEqual(50);
   });
 
-  it("quality should increase by 2 after sell_in by date has passed", function() {
+  it("quality should increase to 50 after sell_in by date has passed", function() {
     items = [ new Item("Aged Brie", -1, 49) ];
     update_quality();
     expect(items[0].quality).toEqual(50);
+  });
+
+  it("quality should increase by 2 after sell_in by date has passed", function() {
+    items = [ new Item("Aged Brie", -1, 40) ];
+    update_quality();
+    expect(items[0].quality).toEqual(42);
   });
 
 });
