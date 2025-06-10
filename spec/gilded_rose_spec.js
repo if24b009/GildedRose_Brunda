@@ -13,4 +13,11 @@ describe("General logic", function() {
       expect(items[0].quality).toEqual(19);
     });
 
+	it("quality decreases by 2 once sell by date has passed", function() {
+      items = [new Item("GeneralItem", 0, 20)];
+      update_quality();
+      expect(items[0].sell_in).toEqual(-1);
+      expect(items[0].quality).toEqual(18);
+    });
+
 });
