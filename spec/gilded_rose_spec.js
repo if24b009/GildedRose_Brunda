@@ -1,9 +1,9 @@
-describe('Legacy Code Gilded Rose', function() {
-	beforeEach(function() {
-		gildedRose = new GildedRose();
-	});
+describe("Gilded Rose", function() {
 
-	it('should return 0 for an empty string', function() {
-		expect(gildedRose.add('')).toEqual(0);
-	});
+  it("should foo", function() {
+    items = [ new Item("foo", 0, 0) ];
+    update_quality();
+    expect(items[0].name).toEqual("fixme");
+  });
+
 });
