@@ -132,5 +132,11 @@ describe("Backstage passes", function() {
     update_quality();
     expect(items[0].quality).toEqual(0);
   });
+  
+  it("quality should increase by 1 when more than 10 days are left", function() {
+    items = [ new Item("Backstage passes to a TAFKAL80ETC concert", 13, 32) ];
+    update_quality();
+    expect(items[0].quality).toEqual(33);
+  });
 
 });
