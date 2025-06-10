@@ -26,4 +26,10 @@ describe("General logic", function() {
       expect(items[0].quality).toEqual(0);
     });
 
+	it("quality is never negative even though sell_in by date has passed", function() {
+      items = [new Item("GeneralItem", 0, 0)];
+      update_quality();
+      expect(items[0].quality).toEqual(0);
+    });
+
 });
