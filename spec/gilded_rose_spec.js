@@ -74,4 +74,10 @@ describe("Sulfuras", function() {
     expect(items[0].quality).toEqual(80);
   });
 
+  it("quality should never decrease even though sell_in is 0", function() {
+    items = [ new Item("Sulfuras, Hand of Ragnaros", 0, 80) ];
+    update_quality();
+    expect(items[0].quality).toEqual(80);
+  });
+
 });
