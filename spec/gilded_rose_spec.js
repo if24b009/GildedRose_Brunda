@@ -151,7 +151,7 @@ describe("Conjured", function() {
       expect(items[0].quality).toEqual(18);
     });
 
-	it("quality decreases by 4 once sell by date has passed", function() {
+	it("quality decreases by 4 once sell_in by date has passed", function() {
       items = [new Item("Conjured Mana Cake", 0, 20)];
       update_quality();
       expect(items[0].sell_in).toEqual(-1);
